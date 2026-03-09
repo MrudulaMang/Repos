@@ -3,10 +3,14 @@ variable "project"{
 }
 
 variable "instance_type"{
-     type = "t3.micro"
+     type = string
 }
 
 variable "environment"{
+    type = string
+}
+
+variable "ami_id" {
     type = string
 }
 
