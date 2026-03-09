@@ -10,6 +10,15 @@ resource "aws_instance" "example"{
  }
 }
 
+/* #for_each only accepts:
+    map
+    set of strings
+  list has index-based identity
+  map has key-based identity
+  for_each requires map or set
+  list must be converted
+*/
+
 /* -----------commented multiple lines
 resource "aws_instance" "example" {
   for_each = {

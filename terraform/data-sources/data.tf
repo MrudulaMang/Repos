@@ -1,6 +1,6 @@
 datasource "aws_ami" "joindevops"{
     most_recent = true
-    owners = ""
+    owners =["973714476881"] #AWS account ID of whoever published the AMI.
 
     filter {
         name = "name"
@@ -9,12 +9,12 @@ datasource "aws_ami" "joindevops"{
 
     filter {
         name = "root-device-type"
-        values = "ebs"
+        values = ["ebs"]
     }
 
     filter {
         name = "virtualization-type"
-        values = "hvm"
+        values = ["hvm"]
     }
 
 }
@@ -36,3 +36,14 @@ data "aws_instance" "terraform_instance" {
 
     }
 }
+
+/* to get zone id
+data "aws_route53_zone" "main" {
+  name = "devopsgeek"
+}
+
+output "zone_id" {
+  value = data.aws_route53_zone.main.zone_id
+}
+
+*/

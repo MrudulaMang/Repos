@@ -4,7 +4,14 @@ variable "instances" {
 }
 
 # zoneid
+variable "zone_id" {
+     default = "Z0520348QRYMUC2F9PWQ" #got from aws-r53-devopsgeek-hostedzone-id
+}
+
 # domain_name
+variable "domain_name" {
+     default = "devopsgeek.online"
+}
 
 # list datatype : output is as is and maitains the order
 variable "fruits" {
