@@ -1,3 +1,6 @@
+# we are creating vpc, subnets and peering
+# storing vpd_id in ssm parameter store
+
 module "vpc" {
     source = "../../terraform-aws-vpc"
     project = var.Project
